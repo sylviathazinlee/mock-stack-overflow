@@ -1,4 +1,4 @@
-Mock Stack Overflow with HTML/CSS/JavaScript
+Mock Stack Overflow with Dynamic Features Using HTML/CSS/JavaScript
 
 ## Contributions:
 Sylvia Lee 
