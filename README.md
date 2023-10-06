@@ -1,6 +1,6 @@
 Mock Stack Overflow with HTML/CSS/JavaScript
 
-##Contributions:
+## Contributions:
 Sylvia Lee 
 1. Home Page
 2. Post a New Question
