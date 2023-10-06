@@ -1,0 +1,457 @@
+/* Add CSS stylesheet */
+.banner {
+    background: #b7b7b7;
+    padding: 25px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+}
+
+.bannerStart {
+    width: 50%;
+}
+
+.bannerTitle {
+    font-weight: bold;
+    font-size: 200%;
+    margin: auto;
+    text-align: center;
+    flex-shrink: 0;
+
+}
+
+.searchBar {
+    width: 50%;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 10px;
+}
+
+.main {
+    display: flex;
+}
+
+.sideNav {
+    background: white;
+    width: 20%;
+    left: 0;
+}
+
+
+
+.contents {
+    width: 80%;
+    min-height: 100vh;
+    border-left: 2px #717171 dashed;
+}
+
+.contents-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px 0px 80px;
+}
+
+.ask-question-button {
+    background-color: #3b88e5;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 25px;
+}
+
+.contents-header2 {
+    display: flex;
+    padding: 0px 80px 15px 80px;
+    border-bottom: 2px #717171 dashed;
+}
+
+.contents-header2 h3 {
+    width: 50%;
+}
+
+.contents-header2 button {
+    background-color: transparent;
+    border-width: 1px;
+    font-size: 18px;
+}
+
+.contents-header2 div {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 65%;
+}
+
+.contents-header3 {
+    border-bottom: 2px #717171 dashed;
+    padding: 30px 0px 30px 0px;
+}
+
+.contents-header3-wrapper {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+
+}
+
+.header3-bottom-border {
+    border-bottom: 2px #717171 dashed;
+}
+
+.contents-header3 h4 {
+    color: #7b7b7b;
+    margin: 0;
+}
+
+.first-block {
+    width: 15%;
+}
+
+.second-block {
+    width: 70%;
+}
+
+.second-block h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.second-block button {
+    padding: 5px 25px 10px;
+    margin-right: 10px;
+    background-color: #737272;
+    border-radius: 10%;
+    color: #fff;
+}
+
+.second-block a {
+    margin: 0;
+}
+
+.third-block {
+    width: 15%;
+}
+
+
+.hide {
+    display: none;
+}
+
+.sideNav ul {
+    padding: 0px;
+    margin-top: 50px;
+    font-size: 20px;
+    list-style: none;
+
+}
+
+.sidenav li {
+    /* 
+    For highlight to not take up the whole block:
+    width: 90%;
+    margin: 25px;
+    */
+    padding: 25px 0px 25px 100px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(57, 86, 159);
+    padding: 5px;
+    margin-left: 15px;
+    font-weight: bold;
+
+}
+
+.active {
+    background-color: #ccc;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#NoQuestions {
+    padding-left: 20%;
+    padding-top: 5%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#ask-question-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+.post-question-button {
+    margin-top: 35px;
+    background-color: #3b88e5;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 20px;
+    /* margin-left: 15px; */
+    max-width: auto;
+}
+
+.guide {
+    margin: 10px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.titlePrompts {
+    margin: 10px;
+}
+
+#inputTitle {
+    width: 30%;
+    height: 60px;
+    font-size: 18px;
+}
+
+#inputText {
+    width: 40%;
+    height: auto;
+    font-size: 14px;
+}
+
+#inputTags {
+    width: 30%;
+    height: 40px;
+    font-size: 12px;
+}
+
+#inputUsername {
+    width: 30%;
+    height: 40px;
+    font-size: 12px;
+}
+
+/* Beginning of Answer Page */
+#title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+    width: 100%;
+}
+
+#title-container>button {
+    margin-right: 20%;
+}
+
+#displayed-title {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 15%;
+
+}
+
+#answer-count {
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+#question-container {
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#question-metadata {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 15%;
+    padding-right: 5%;
+    flex: 2;
+}
+
+.asked-by {
+    color: red
+}
+
+.ask-date {
+    padding-left: 18px;
+}
+
+.view-count {
+    margin-left: 5%;
+    flex: 1;
+}
+
+#displayed-question {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    flex: 3;
+}
+
+.single-answer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-top: 2px dotted #717171; /*Dotted Line between answers*/
+    padding-bottom: 10px;
+}
+
+.answer-content {
+    display: block;
+    word-wrap: break-word; 
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 35px;
+    margin-right: 20px;
+    padding-top: 15px;
+    max-width: 80%;
+}
+
+.answer-metadata {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: center;
+    flex: none; 
+
+    font-weight:bold;
+    padding-right: 5%;
+}
+
+
+.answer-username {
+    padding-top: 15px;
+    word-wrap: break-word;
+    padding-right: 15px;
+    width: 150px;
+    color:green;
+
+}
+
+
+.dotted-line {
+    height: 2px;
+    border-top: 2px dotted #717171;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.answer-question-button {
+    background-color: #3b88e5;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 25px;
+    margin-left: 15px;
+}
+
+/* End of Answer Page */
+
+/* Beginning of Add Answer Page */
+#add-answer-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+
+
+
+#answerUsername {
+    height: 35px;
+}
+
+#answerUsername,
+#answerText {
+    width: 500px;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 35px;
+    display: block;
+}
+
+.submission-section {
+    display: flex;
+    gap: 100px;
+}
+
+.post-answer-button {
+    margin-top: 35px;
+    background-color: #3b88e5;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 25px;
+    /* margin-left: 15px; */
+    max-width: 150px;
+}
+
+#mandatoryfields {
+    padding-top: 75px;
+    font-weight: lighter;
+    font-size: 16px;
+    color: red;
+}
+
+/* End of Add Answer Page */
+
+#title-container-tag {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    width: 80%;
+    padding-bottom: 5%;
+}
+
+#tag-count {
+    flex: 1;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+
+}
+
+#all-tags-title {
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.tag-row {
+    margin-bottom: 2.5%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted black;
+    padding: 5px;
+    margin: 60px;
+    box-sizing: border-box;
+    width: 140px;
+}
+
+.tag a {
+    margin-left: -5px;
+    width: 90px;
+    text-decoration: none;
+    color: dodgerblue;
+    margin-bottom: 5px;
+}
