@@ -1,0 +1,158 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+  <title>Fake Stack Overflow</title>
+</head>
+
+<body>
+  <div id="header" class="header">
+    <div class="banner">
+      <div class="bannerStart"></div>
+      <div class="bannerTitle">Fake Stack Overflow</div>
+      <div class="searchBar">
+        <input id="searchInput" type="text" placeholder="Search ..." name="search-bar">
+      </div>
+    </div>
+
+  </div>
+
+  <div id="main" class="main">
+    <div class="sideNav">
+      <ul>
+        <li class="active">
+          <a href="javascript:;" onclick="changePage('page-home')">Questions</a>
+        </li>
+        <li>
+          <a href="javascript:;" onclick="changePage('page-tag') ">Tags</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contents">
+
+      <!--Homepage------------------------------------->
+      <div id="page-home" class="page">
+        <div class="contents-header">
+          <h2>All Questions</h2>
+          <button class="ask-question-button" onclick="changePage('page-question')" >Ask Question</button>
+        </div>
+
+        <div id="sorting-buttons">
+          <div class="contents-header2">
+            <h3 id="total-questions"></h3>
+            <div>
+              <button onclick="renderQuestions('newest')">Newest</button>
+              <button onclick="renderQuestions('active')">Active</button>
+              <button onclick="renderQuestions('unanswered')">Unanswered</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="list-of-questions">
+
+        </div>
+
+      </div>
+      <!--End of Homepage------------------------------------->
+
+
+      <!--Ask Question Page----------------------------------->
+      <div id="page-question" class="page hide">
+        <div id="ask-question-container">
+          <h2 id="questionTitle" class="titlePrompts">Question Title*</h2>
+          <div>
+            <p class = "guide"> Limit title to 100 characters or less </p>
+            <input type="text" id="inputTitle" placeholder="Enter title">
+            <span id="inputTitleError" class="error-message"></span>
+          </div>
+          <h2 id="questionText" class="titlePrompts">Question Text*</h2>
+          <div>
+            <p class="guide">Add details</p>
+            <textarea id="inputText" rows="15" placeholder="Enter your question"></textarea>
+            <span id="inputTextError" class="error-message"></span>
+          </div>
+          <h2 id="questionText" class="titlePrompts">Tags*</h2>
+          <div>
+            <p class="guide">Add keywords separated by whitespaces</p>
+            <input type="text" id="inputTags" placeholder="Enter tags">
+            <span id="inputTagsError" class="error-message"></span>
+          </div>
+          <h2 id="questionText" class="titlePrompts">Username*</h2>
+          <div>
+            <input type="text" id="inputUsername" placeholder="Enter your username">
+            <span id="inputUsernameError" class="error-message"></span>
+          </div>
+          <div class="submission-section">
+            <button class="post-question-button" onclick="postQuestion()">Post Question</button>
+            <h2 id="mandatoryfields">* indicates mandatory fields</h2>
+          </div>
+
+        </div>
+      </div>
+      <!--End of Ask Question Page---------------------------->
+
+
+      <!--Tag Page----------------------------------->
+      <div id="page-tag" class="page hide">
+        <div id="title-container-tag"> <!-- Title Container-->
+          <div id="tag-count"></div>
+          <h2 id="all-tags-title">All Tags</h2>
+          <button class="ask-question-button" onclick="changePage('page-question')">Ask Question</button>
+        </div>
+        <div id="tag-container"></div>
+      </div>
+      <!--End of Tag Page---------------------------->
+
+
+      <!--Answer Page----------------------------------->
+      <div id="page-answer" class="page hide">
+        <div id="title-container"> <!-- Title Container-->
+          <div id="answer-count"></div>
+          <h2 id="displayed-title"></h2>
+          <button class="ask-question-button" onclick="changePage('page-question')">Ask Question</button>
+          <!--Need to add click function-->
+        </div>
+        <div id="question-container"> <!-- Question Container -->
+          <div class="view-count"></div>
+          <div id="displayed-question"></div>
+          <div id="question-metadata"></div>
+        </div>
+        <section id="displayed-answers">
+        </section> <!-- Answer Container -->
+        <div class="dotted-line"></div>
+        <button class="answer-question-button" onclick="changePage('page-add-answer')">Answer Question</button>
+      </div>
+      <!--End of Answer Page---------------------------->
+
+      <!--Add Answer Page------------------------------->
+      <div id="page-add-answer" class="page hide">
+        <div id="add-answer-container">
+          <h2 id="usernametitle">Username*</h2>
+          <div>
+            <input type="text" id="answerUsername" placeholder="Enter your username">
+            <span id="answerUsernameError" class="error-message"></span>
+          </div>
+          <h2 id="answertexttitle">Answer Text*</h2>
+          <div>
+            <textarea id="answerText" rows="15" placeholder="Enter your answer here"></textarea>
+            <span id="answerTextError" class="error-message"></span>
+          </div>
+          <div class="submission-section">
+            <button class="post-answer-button" onclick="postAnswer()">Post Answer</button>
+            <h2 id="mandatoryfields">* indicates mandatory fields</h2>
+          </div>
+        </div>
+      </div>
+      <!--End of Add Answer Page---------------------------->
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
